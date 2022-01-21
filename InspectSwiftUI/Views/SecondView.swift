@@ -17,7 +17,7 @@ struct SecondView: View {
             Text("Counter = \(sharedModel.counter)")
             Button {
                 if let inspectorView = inspectorView {
-                    image = inspectorView.getScreenshot()
+                    image = inspectorView.screenshot()
                 }
                 else {
                     image = self.snapshot(environment: sharedModel)

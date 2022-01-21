@@ -25,6 +25,12 @@ struct FirstView: View {
                 NavigationLink(destination: SecondView()) {
                     Text("Show second view")
                 }
+                NavigationLink(destination: ToggleView()) {
+                    Text("Show view with toggle")
+                }
+                NavigationLink(destination: ViewContainingToggle()) {
+                    Text("Show view containing ToogleView")
+                }
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
