@@ -8,13 +8,6 @@
 import Foundation
 import SwiftUI
 
-class InspectorUIView: UIView {
-    func getScreenshot() -> UIImage? {
-        guard let containerView = self.superview?.superview else { return nil }
-        return containerView.screenshot()
-    }
-}
-
 typealias UIViewClosure = (InspectorUIView) -> Void
 
 struct InspectorView: UIViewRepresentable {
