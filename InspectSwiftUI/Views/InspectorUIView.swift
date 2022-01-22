@@ -14,7 +14,7 @@ class InspectorUIView: UIView {
         guard let containerView = self.superview?.superview else { return nil }
         let renderer = UIGraphicsImageRenderer(bounds: containerView.bounds)
         return renderer.image { (context) in
-            self.layer.render(in: context.cgContext)
+            containerView.layer.render(in: context.cgContext)
         }
     }
 }
