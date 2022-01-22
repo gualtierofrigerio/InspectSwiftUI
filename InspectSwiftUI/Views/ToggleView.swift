@@ -18,12 +18,9 @@ struct ToggleView: View {
             }
             .background(darkBackground ? Color.black : Color.white)
             Button {
-                image = snapshot()
+                snapshot().saveToDocuments()
             } label: {
                 Text("Take screenshot")
-            }
-            if let image = image {
-                Image(uiImage: image)
             }
         }
     }
