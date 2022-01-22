@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ViewContainingToggle: View {
-    @State var image: UIImage?
     @State var inspectorView: InspectorUIView?
     
     var body: some View {
@@ -18,10 +17,10 @@ struct ViewContainingToggle: View {
                 .border(.orange, width: 2.0)
             Button {
                 if let inspectorView = inspectorView {
-                    image = inspectorView.screenshot()
+                    inspectorView.screenshot()?.saveToDocuments()
                 }
                 else {
-                    image = snapshot()
+                    snapshot().saveToDocuments()
                 }
             } label: {
                 Text("Take screenshot")
@@ -29,9 +28,6 @@ struct ViewContainingToggle: View {
         }
         .inspectView { inspectorView in
             self.inspectorView = inspectorView
-        }
-        if let image = image {
-            Image(uiImage: image)
         }
     }
 }
