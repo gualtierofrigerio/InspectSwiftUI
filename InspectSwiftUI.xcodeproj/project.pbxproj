@@ -19,6 +19,7 @@
 		25B5A765279AE01C006768D4 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5A764279AE01C006768D4 /* ToggleView.swift */; };
 		25B5A767279AE44C006768D4 /* ViewContainingToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5A766279AE44C006768D4 /* ViewContainingToggle.swift */; };
 		25B5A769279AFF34006768D4 /* InspectorUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5A768279AFF34006768D4 /* InspectorUIView.swift */; };
+		25F59A24279C0C43007865F5 /* UIImage+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F59A23279C0C43007865F5 /* UIImage+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		25B5A764279AE01C006768D4 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		25B5A766279AE44C006768D4 /* ViewContainingToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContainingToggle.swift; sourceTree = "<group>"; };
 		25B5A768279AFF34006768D4 /* InspectorUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorUIView.swift; sourceTree = "<group>"; };
+		25F59A23279C0C43007865F5 /* UIImage+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				253FAF8C279968D2003A254A /* View+ext.swift */,
+				25F59A23279C0C43007865F5 /* UIImage+ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				253FAF8927996576003A254A /* SharedModel.swift in Sources */,
+				25F59A24279C0C43007865F5 /* UIImage+ext.swift in Sources */,
 				25B5A767279AE44C006768D4 /* ViewContainingToggle.swift in Sources */,
 				253FAF8B279965E0003A254A /* SecondView.swift in Sources */,
 				253FAF8F27997872003A254A /* InspectorView.swift in Sources */,
