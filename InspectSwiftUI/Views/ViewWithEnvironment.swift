@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ViewWithEnvironment: View {
     @EnvironmentObject var sharedModel: SharedModel
-    @State var image: UIImage?
     @State var inspectorView: InspectorUIView?
     
     var body: some View {
@@ -17,10 +16,10 @@ struct ViewWithEnvironment: View {
             Text("Counter = \(sharedModel.counter)")
             Button {
                 if let inspectorView = inspectorView {
-                    image = inspectorView.screenshot()
+                    inspectorView.screenshot()?.saveToDocuments()
                 }
                 else {
-                    image = self.snapshot(environment: sharedModel)
+                    self.snapshot().saveToDocuments()
                 }
             } label: {
                 Text("take snapshot")
@@ -28,10 +27,6 @@ struct ViewWithEnvironment: View {
         }
         .inspectView { inspectorView in
             self.inspectorView = inspectorView
-        }
-        Text("See the screenshot below")
-        if let image = image {
-            Image(uiImage: image)
         }
     }
 }
