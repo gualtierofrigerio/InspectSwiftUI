@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContainerView: View {
+    @State var inspectorView: InspectorUIView?
+    
     var body: some View {
         VStack {
             Text("Container View")
@@ -18,6 +20,19 @@ struct ContainerView: View {
             Text("View with toggle")
             ViewContainingToggle()
             Spacer()
+            Button {
+                if let inspectorView = inspectorView {
+                    inspectorView.screenshot()?.saveToDocuments()
+                }
+                else {
+                    snapshot().saveToDocuments()
+                }
+            } label: {
+                Text("Take screenshot ContainerView")
+            }
+        }
+        .inspectView { inspectorView in
+            self.inspectorView = inspectorView
         }
     }
 }
