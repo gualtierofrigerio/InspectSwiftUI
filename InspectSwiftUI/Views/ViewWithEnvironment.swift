@@ -22,7 +22,7 @@ struct ViewWithEnvironment: View {
                     self.snapshot().saveToDocuments()
                 }
             } label: {
-                Text("take snapshot")
+                Text("Take screenshot inside ViewWithEnvironment")
             }
         }
         .inspectView { inspectorView in

@@ -20,7 +20,7 @@ struct ToggleView: View {
             Button {
                 snapshot().saveToDocuments()
             } label: {
-                Text("Take screenshot")
+                Text("Take screenshot ToggleView")
             }
         }
     }

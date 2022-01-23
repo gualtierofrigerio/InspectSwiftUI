@@ -12,7 +12,7 @@ struct ViewContainingToggle: View {
     
     var body: some View {
         VStack {
-            Text("Below the view with toggle")
+            Text("ToggleView inside orange border")
             ToggleView()
                 .border(.orange, width: 2.0)
             Button {
@@ -23,7 +23,7 @@ struct ViewContainingToggle: View {
                     snapshot().saveToDocuments()
                 }
             } label: {
-                Text("Take screenshot")
+                Text("Take screenshot ViewContainingToggle")
             }
         }
         .inspectView { inspectorView in
