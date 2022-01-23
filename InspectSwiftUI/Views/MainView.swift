@@ -22,8 +22,8 @@ struct MainView: View {
                 } label: {
                     Text("Increment counter")
                 }
-                NavigationLink(destination: ViewWithEnvironment()) {
-                    Text("Show second view")
+                NavigationLink(destination: ContainerView()) {
+                    Text("Show container view")
                 }
                 NavigationLink(destination: ToggleView()) {
                     Text("Show view with toggle")
@@ -38,7 +38,7 @@ struct MainView: View {
     }
 }
 
-struct ContainerView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
     }
