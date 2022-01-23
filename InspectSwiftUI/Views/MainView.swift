@@ -14,9 +14,6 @@ struct MainView: View {
         NavigationView {
             VStack {
                 Text("Counter = \(sharedModel.counter)")
-                    .inspectView { inspectorView in
-                        print("inspectorView \(inspectorView)")
-                    }
                 Button {
                     sharedModel.counter += 1
                 } label: {
