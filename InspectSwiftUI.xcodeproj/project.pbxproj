@@ -11,9 +11,9 @@
 		253FAF7A27996403003A254A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FAF7927996403003A254A /* ContentView.swift */; };
 		253FAF7C27996406003A254A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253FAF7B27996406003A254A /* Assets.xcassets */; };
 		253FAF7F27996406003A254A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253FAF7E27996406003A254A /* Preview Assets.xcassets */; };
-		253FAF8627996427003A254A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FAF8527996427003A254A /* FirstView.swift */; };
+		253FAF8627996427003A254A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FAF8527996427003A254A /* MainView.swift */; };
 		253FAF8927996576003A254A /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FAF8827996576003A254A /* SharedModel.swift */; };
-		253FAF8B279965E0003A254A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FAF8A279965E0003A254A /* SecondView.swift */; };
+		253FAF8B279965E0003A254A /* ViewWithEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FAF8A279965E0003A254A /* ViewWithEnvironment.swift */; };
 		253FAF8D279968D2003A254A /* View+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FAF8C279968D2003A254A /* View+ext.swift */; };
 		253FAF8F27997872003A254A /* InspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FAF8E27997872003A254A /* InspectorView.swift */; };
 		25B5A765279AE01C006768D4 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B5A764279AE01C006768D4 /* ToggleView.swift */; };
@@ -28,9 +28,9 @@
 		253FAF7927996403003A254A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		253FAF7B27996406003A254A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		253FAF7E27996406003A254A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		253FAF8527996427003A254A /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		253FAF8527996427003A254A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		253FAF8827996576003A254A /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
-		253FAF8A279965E0003A254A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		253FAF8A279965E0003A254A /* ViewWithEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithEnvironment.swift; sourceTree = "<group>"; };
 		253FAF8C279968D2003A254A /* View+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ext.swift"; sourceTree = "<group>"; };
 		253FAF8E27997872003A254A /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
 		25B5A764279AE01C006768D4 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
@@ -91,10 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				253FAF7927996403003A254A /* ContentView.swift */,
-				253FAF8527996427003A254A /* FirstView.swift */,
+				253FAF8527996427003A254A /* MainView.swift */,
 				253FAF8E27997872003A254A /* InspectorView.swift */,
 				25B5A768279AFF34006768D4 /* InspectorUIView.swift */,
-				253FAF8A279965E0003A254A /* SecondView.swift */,
+				253FAF8A279965E0003A254A /* ViewWithEnvironment.swift */,
 				25B5A764279AE01C006768D4 /* ToggleView.swift */,
 				25B5A766279AE44C006768D4 /* ViewContainingToggle.swift */,
 			);
@@ -191,13 +191,13 @@
 				253FAF8927996576003A254A /* SharedModel.swift in Sources */,
 				25F59A24279C0C43007865F5 /* UIImage+ext.swift in Sources */,
 				25B5A767279AE44C006768D4 /* ViewContainingToggle.swift in Sources */,
-				253FAF8B279965E0003A254A /* SecondView.swift in Sources */,
+				253FAF8B279965E0003A254A /* ViewWithEnvironment.swift in Sources */,
 				253FAF8F27997872003A254A /* InspectorView.swift in Sources */,
 				25B5A769279AFF34006768D4 /* InspectorUIView.swift in Sources */,
 				25B5A765279AE01C006768D4 /* ToggleView.swift in Sources */,
 				253FAF8D279968D2003A254A /* View+ext.swift in Sources */,
 				253FAF7A27996403003A254A /* ContentView.swift in Sources */,
-				253FAF8627996427003A254A /* FirstView.swift in Sources */,
+				253FAF8627996427003A254A /* MainView.swift in Sources */,
 				253FAF7827996403003A254A /* InspectSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
