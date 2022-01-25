@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ToggleView: View {
     @State var darkBackground = false
-    @State var image: UIImage?
     
     var body: some View {
         VStack {

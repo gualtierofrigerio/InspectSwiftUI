@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContainerView: View {
-    @State var screenshotMaker: ScreenshotUIView?
+    @State var screenshotMaker: ScreenshotMaker?
     
     var body: some View {
         VStack {
