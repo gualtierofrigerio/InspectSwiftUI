@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ViewWithEnvironment: View {
     @EnvironmentObject var sharedModel: SharedModel
-    @State var inspectorView: InspectorUIView?
+    @State var screenshotMaker: ScreenshotMaker?
     
     var body: some View {
         VStack {
             Text("Counter = \(sharedModel.counter)")
             Button {
-                if let inspectorView = inspectorView {
-                    inspectorView.screenshot()?.saveToDocuments()
+                if let screenshotMaker = screenshotMaker {
+                    screenshotMaker.screenshot()?.saveToDocuments()
                 }
                 else {
                     self.snapshot().saveToDocuments()
@@ -25,8 +25,8 @@ struct ViewWithEnvironment: View {
                 Text("Take screenshot inside ViewWithEnvironment")
             }
         }
-        .inspectView { inspectorView in
-            self.inspectorView = inspectorView
+        .screenshotView { screenshotMaker in
+            self.screenshotMaker = screenshotMaker
         }
     }
 }

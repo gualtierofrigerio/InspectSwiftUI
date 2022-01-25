@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ViewContainingToggle: View {
-    @State var inspectorView: InspectorUIView?
+    @State var screenshotMaker: ScreenshotMaker?
     
     var body: some View {
         VStack {
@@ -16,8 +16,8 @@ struct ViewContainingToggle: View {
             ToggleView()
                 .border(.orange, width: 2.0)
             Button {
-                if let inspectorView = inspectorView {
-                    inspectorView.screenshot()?.saveToDocuments()
+                if let screenshotMaker = screenshotMaker {
+                    screenshotMaker.screenshot()?.saveToDocuments()
                 }
                 else {
                     snapshot().saveToDocuments()
@@ -26,8 +26,8 @@ struct ViewContainingToggle: View {
                 Text("Take screenshot ViewContainingToggle")
             }
         }
-        .inspectView { inspectorView in
-            self.inspectorView = inspectorView
+        .screenshotView { screenshotMaker in
+            self.screenshotMaker = screenshotMaker
         }
     }
 }
