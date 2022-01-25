@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContainerView: View {
-    @State var inspectorView: InspectorUIView?
+    @State var screenshotMaker: ScreenshotUIView?
     
     var body: some View {
         VStack {
@@ -21,8 +21,8 @@ struct ContainerView: View {
             ViewContainingToggle()
             Spacer()
             Button {
-                if let inspectorView = inspectorView {
-                    inspectorView.screenshot()?.saveToDocuments()
+                if let screenshotMaker = screenshotMaker {
+                    screenshotMaker.screenshot()?.saveToDocuments()
                 }
                 else {
                     snapshot().saveToDocuments()
@@ -31,8 +31,8 @@ struct ContainerView: View {
                 Text("Take screenshot ContainerView")
             }
         }
-        .inspectView { inspectorView in
-            self.inspectorView = inspectorView
+        .screenshotView { screenshotMaker in
+            self.screenshotMaker = screenshotMaker
         }
     }
 }
