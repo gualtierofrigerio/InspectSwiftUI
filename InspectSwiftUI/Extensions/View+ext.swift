@@ -45,6 +45,6 @@ extension View {
 extension View {
     func screenshotView(_ closure: @escaping ScreenshotMakerClosure) -> some View {
         let screenshotView = ScreenshotMakerView(closure)
-        return overlay(screenshotView.frame(width: 0, height: 0))
+        return overlay(screenshotView.allowsHitTesting(false))
     }
 }
