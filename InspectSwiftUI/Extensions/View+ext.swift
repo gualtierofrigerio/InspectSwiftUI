@@ -43,8 +43,8 @@ extension View {
 }
 
 extension View {
-    func inspectView(_ closure: @escaping UIViewClosure) -> some View {
-        let inspectorView = InspectorView(closure)
-        return overlay(inspectorView.frame(width: 0, height: 0))
+    func screenshotView(_ closure: @escaping ScreenshotMakerClosure) -> some View {
+        let screenshotView = ScreenshotMakerView(closure)
+        return overlay(screenshotView.frame(width: 0, height: 0))
     }
 }
