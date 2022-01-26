@@ -11,34 +11,33 @@ struct TestView: View {
     var body: some View {
         Text("Text...")
             .background(.blue)
-        HostViewContainer()
-    }
-}
-
-struct ViewText: View {
-    var body: some View {
-        VStack {
-            Text("Text...")
-                .background(.blue)
+        HostViewContainer {
+            VStack {
+                Text("First row")
+                Text("Second row")
+            }
         }
     }
 }
+
 
 class HostViewContainerModel: ObservableObject {
     @Published var size: CGSize = .zero
 }
 
-struct HostViewContainer: View {
+struct HostViewContainer<Content: View>: View {
     @ObservedObject var model = HostViewContainerModel()
+    let content: Content
+    
+    init(_ content: () -> Content) {
+        self.content = content()
+    }
     
     var body: some View {
         HostView(model: model) {
-            VStack {
-                Text("Write whathever you want")
-                Text("It still works")
-            }
+            content
         }
-            .frame(width: model.size.width, height: model.size.height)
+        .frame(width: model.size.width, height: model.size.height)
     }
 }
 
@@ -52,7 +51,6 @@ struct HostView<Content: View>: UIViewControllerRepresentable {
     }
     
     func makeUIViewController(context: Context) -> some UIViewController {
-        let text = Text("Text in UIViewControllerRepresentable")
         let controller = UIHostingController(rootView: self.content)
         controller.view.backgroundColor = .orange
         let size = controller.view.intrinsicContentSize
@@ -63,7 +61,6 @@ struct HostView<Content: View>: UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: UIViewControllerType,
                                 context: Context) {
-        print(uiViewController.view)
     }
 }
 
