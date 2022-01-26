@@ -21,6 +21,7 @@
 		25E995BD279DC87A00DF140B /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E995BC279DC87A00DF140B /* ContainerView.swift */; };
 		25E995BF279DCFA500DF140B /* ScreenshotMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E995BE279DCFA500DF140B /* ScreenshotMakerView.swift */; };
 		25F59A24279C0C43007865F5 /* UIImage+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F59A23279C0C43007865F5 /* UIImage+ext.swift */; };
+		25F6263B27A18AF4000817ED /* TestUIHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F6263A27A18AF4000817ED /* TestUIHostingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		25E995BC279DC87A00DF140B /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		25E995BE279DCFA500DF140B /* ScreenshotMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotMakerView.swift; sourceTree = "<group>"; };
 		25F59A23279C0C43007865F5 /* UIImage+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ext.swift"; sourceTree = "<group>"; };
+		25F6263A27A18AF4000817ED /* TestUIHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIHostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				253FAF8A279965E0003A254A /* ViewWithEnvironment.swift */,
 				25B5A764279AE01C006768D4 /* ToggleView.swift */,
 				25B5A766279AE44C006768D4 /* ViewContainingToggle.swift */,
+				25F6263A27A18AF4000817ED /* TestUIHostingController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				25E995BD279DC87A00DF140B /* ContainerView.swift in Sources */,
 				253FAF7A27996403003A254A /* ContentView.swift in Sources */,
 				253FAF8627996427003A254A /* MainView.swift in Sources */,
+				25F6263B27A18AF4000817ED /* TestUIHostingController.swift in Sources */,
 				253FAF7827996403003A254A /* InspectSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
