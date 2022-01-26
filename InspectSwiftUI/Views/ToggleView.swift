@@ -14,14 +14,16 @@ struct ToggleView: View {
         VStack {
             Toggle(isOn: $darkBackground) {
                 Text("Switch to dark")
+                    .foregroundColor(darkBackground ? .white : .black)
             }
-            .background(darkBackground ? Color.black : Color.white)
+            .background(darkBackground ? .black : .white)
             Button {
                 snapshot().saveToDocuments()
             } label: {
                 Text("Take screenshot ToggleView")
             }
         }
+        .border(Color.red, width: 1.0)
     }
 }
 
