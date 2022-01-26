@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TestView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Text...")
+            .background(.blue)
         HostViewContainer()
     }
 }
@@ -35,9 +36,9 @@ struct HostView: UIViewControllerRepresentable {
     }
     
     func makeUIViewController(context: Context) -> some UIViewController {
-        let text = Text("Short text now longer")
+        let text = Text("Text in UIViewControllerRepresentable")
         let controller = UIHostingController(rootView: text)
-        controller.view.backgroundColor = .red
+        controller.view.backgroundColor = .orange
         let size = controller.view.intrinsicContentSize
         controller.view.frame = CGRect(origin: .zero, size: size)
         model.size = size
