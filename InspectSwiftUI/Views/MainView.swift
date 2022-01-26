@@ -19,16 +19,29 @@ struct MainView: View {
                 } label: {
                     Text("Increment counter")
                 }
+                Spacer()
                 NavigationLink(destination: ContainerView()) {
                     Text("Show container view")
                 }
+                Spacer()
                 NavigationLink(destination: ToggleView()) {
                     Text("Show view with toggle")
                 }
+                Spacer()
                 NavigationLink(destination: ViewContainingToggle()) {
                     Text("Show view containing ToogleView")
                 }
+                Spacer()
             }
+            .screenshotView { screenshotMaker in
+                // take a screenshot only of the VStack without the title
+                screenshotMaker.screenshot()?.saveToDocuments()
+            }
+            .navigationTitle("This is the title")
+        }
+        .screenshotView { screenshotMaker in
+            // take a screenshot of the NavigationView including the title
+            screenshotMaker.screenshot()?.saveToDocuments()
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .environmentObject(sharedModel)
